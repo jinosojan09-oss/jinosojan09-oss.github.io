@@ -1,0 +1,149 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#12221f"><title>E-Note App — Sandeep Kanathil Aji</title><meta name="description" content="Smart desk display · 10-slide presentation"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"><style>:root{--accent:#16bbb2;--ink:#eaf2ed;--muted:#aebeb6}*{box-sizing:border-box}body{background:radial-gradient(circle at 0% 0%,#25443b,#111e1b 60%);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;margin:0;line-height:1.6}a{color:var(--accent)}.bar{max-width:1240px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px;flex-wrap:wrap}.bar a{font-weight:700;text-decoration:none}.bar span{font-size:.82rem;color:var(--muted)}.wrap{width:min(1120px,calc(100% - 32px));margin:0 auto 50px}h1{font-size:clamp(1.8rem,4vw,3.4rem);font-family:'Space Grotesk',sans-serif;letter-spacing:-.045em;line-height:1.06;margin:15px 0 4px}.subtitle{color:var(--accent);font-weight:600;margin:0 0 20px}.slide{display:none;position:relative;width:100%;min-height:570px;padding:clamp(28px,5vw,68px);border-radius:24px;background:linear-gradient(140deg,#152b34,#101b29 72%);overflow:auto;border:1px solid #465d59;box-shadow:0 25px 80px #050e0bad}.slide.active{display:block}.slide:before{content:"";position:absolute;inset:0 auto 0 0;width:9px;background:var(--accent)}.slidemeta{display:flex;justify-content:space-between;gap:10px;color:var(--accent);font-size:.7rem;font-weight:700;letter-spacing:.14em}.slide h2{font-family:'Space Grotesk',sans-serif;max-width:950px;font-size:clamp(1.85rem,4.8vw,4.5rem);letter-spacing:-.055em;line-height:1.08;margin:35px 0 28px;overflow-wrap:anywhere}.slidecontent{font-size:clamp(.79rem,1.25vw,1.04rem);white-space:pre-wrap;overflow-wrap:anywhere;color:#d9e2de;max-width:910px;line-height:1.55}.controls{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap;padding:26px 0}.controls button{border:none;cursor:pointer;padding:12px 21px;background:var(--accent);color:#17221e;border-radius:30px;font-weight:800}.controls button:disabled{opacity:.36;cursor:default}.controls span{color:var(--muted);min-width:70px;text-align:center}.note{background:#f1e6c8;color:#292719;padding:17px 20px;border-radius:13px;margin:0 0 25px;font-size:.84rem}.foot{color:#b8c4bc;text-align:center;font-size:.8rem;padding:15px}.slide:focus{outline:2px solid var(--accent)}@media(max-width:600px){.slide{min-height:610px}.slidemeta{font-size:.58rem}.slide h2{margin-top:27px}}@media print{body{background:white}.bar,.controls,.foot,.note,h1,.subtitle{display:none}.slide{display:block!important;border:none;box-shadow:none;page-break-after:always;border-radius:0;min-height:550px}}</style></head><body><header class="bar"><a href="../">← Sandeep's portfolio</a><span>App Development / Presentation</span></header><main class="wrap"><h1>E-Note App</h1><p class="subtitle">Flutter · Firebase · ESP32</p><div class="slides"><section class="slide active" aria-label="Slide 1 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>01 / 10</span></div><h2>[Presentation metadata from ppt/presentation.xml]</h2><div class="slidecontent">Canvas width: 9144000 EMU; canvas height: 5143500 EMU; 914400 EMU per inch.
+
+E-NOTE
+Flutter Mobile App for Smart Desk Display
+App Development Mini Project
+Sandeep Kanathil Aji</div></section>
+<section class="slide" aria-label="Slide 2 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>02 / 10</span></div><h2>What is E-Note?</h2><div class="slidecontent">E-Note is a Flutter mobile app that remotely controls an ESP32-powered e-paper desk display. Users can manage todos and push messages from their phone, which sync in real time to a physical screen on their desk via Firebase.
+This presentation focuses on the Flutter app: its architecture, UI design, state management, and Firebase integration.
+Flutter App
+Cross-platform (Android &amp; iOS)
+GetX state management
+Firebase Realtime Database
+Material Design UI</div></section>
+<section class="slide" aria-label="Slide 3 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>03 / 10</span></div><h2>App Architecture</h2><div class="slidecontent">UI Layer
+Views &amp; Widgets
+Screens (Home, Todo, Message)
+Custom widgets
+Material Design components
+Responsive layouts
+▶
+Logic Layer
+GetX Controllers
+State management
+Business logic
+Reactive bindings
+Dependency injection
+▶
+Data Layer
+Firebase RTDB
+Real-time read/write
+JSON data structure
+Stream listeners
+Offline persistence</div></section>
+<section class="slide" aria-label="Slide 4 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>04 / 10</span></div><h2>Tech Stack</h2><div class="slidecontent">Framework
+Flutter (Dart)
+Cross-platform mobile framework by Google. Single codebase for Android and iOS with native performance.
+State Management
+GetX
+Lightweight reactive state manager with built-in dependency injection and route management.
+Backend
+Firebase Realtime DB
+NoSQL cloud database with real-time sync. Data stored as JSON, streams updates to all connected clients.
+UI Framework
+Material Design
+Google's design system built into Flutter. Provides consistent, polished UI components out of the box.</div></section>
+<section class="slide" aria-label="Slide 5 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>05 / 10</span></div><h2>App Features</h2><div class="slidecontent">Todo Management
+Create, edit, delete, and reorder to-do items. Changes push instantly to the desk display.
+Message Push
+Type custom messages in the app and send them to the e-paper screen with one tap.
+Device Status
+Monitor the ESP32 connection status and display health in real time from the app.
+Live Sync
+Firebase streams keep the app and display perfectly in sync with zero manual refresh.
+GetX Routing
+Named routes with GetX for smooth screen transitions and deep linking support.
+Clean Material UI
+Consistent Material Design with custom theming, responsive layouts, and intuitive navigation.</div></section>
+<section class="slide" aria-label="Slide 6 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>06 / 10</span></div><h2>State Management</h2><div class="slidecontent">Why GetX?
+Reactive state updates with .obs variables
+No boilerplate code like Provider or BLoC
+Built-in dependency injection with Get.put()
+Route management without BuildContext
+Lightweight with minimal performance overhead
+GetX Pattern
+// Controller
+class TodoController extends GetxController {
+var todos = &lt;Todo&gt;[].obs;
+void addTodo(Todo item) {
+todos.add(item);
+FirebaseDB.push(item);
+}
+}
+// View
+Obx(() =&gt; ListView.builder(
+itemCount: controller.todos.length,
+...
+))</div></section>
+<section class="slide" aria-label="Slide 7 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>07 / 10</span></div><h2>Firebase Integration</h2><div class="slidecontent">The app uses Firebase Realtime Database to sync data between the mobile app and the ESP32 hardware. Every change in the app is instantly reflected on the desk display.
+1
+User creates/edits a todo or message in the app
+2
+App writes data to Firebase RTDB as JSON
+3
+Firebase triggers stream update to all listeners
+4
+ESP32 receives data and refreshes the e-paper display
+Database Structure
+enote/
+todos/
+todo_1: {
+&quot;title&quot;: &quot;Buy groceries&quot;,
+&quot;done&quot;: false
+}
+messages/
+msg_1: {
+&quot;text&quot;: &quot;Meeting at 3PM&quot;,
+&quot;timestamp&quot;: 1715...
+}
+device/
+&quot;status&quot;: &quot;online&quot;,
+&quot;lastSync&quot;: 1715...</div></section>
+<section class="slide" aria-label="Slide 8 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>08 / 10</span></div><h2>Project Structure</h2><div class="slidecontent">Folder Layout
+lib/
+main.dart
+controllers/
+todo_controller.dart
+message_controller.dart
+device_controller.dart
+views/
+home_screen.dart
+todo_screen.dart
+message_screen.dart
+models/
+todo_model.dart
+message_model.dart
+services/
+firebase_service.dart
+widgets/
+custom_card.dart
+Controllers
+GetX controllers handle business logic and reactive state. Each feature has its own controller.
+Views
+Screen widgets that observe controller state using Obx() and rebuild automatically on changes.
+Models
+Data classes for todos and messages with toJson/fromJson for Firebase serialization.
+Services
+Firebase RTDB wrapper that handles all read, write, and stream operations.</div></section>
+<section class="slide" aria-label="Slide 9 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>09 / 10</span></div><h2>Packages Used</h2><div class="slidecontent">Package
+Version
+Purpose
+get
+latest
+State management, routing, and dependency injection
+firebase_core
+3.15.2
+Initialize Firebase services in the Flutter app
+firebase_database
+11.3.10
+Read, write, and stream data from Firebase RTDB
+shared_preferences
+2.5.3
+Persist simple key-value data locally on device
+cupertino_icons
+latest
+iOS-style icons for cross-platform UI consistency
+path_provider
+latest
+Access file system paths for local storage</div></section>
+<section class="slide" aria-label="Slide 10 of 10"><div class="slidemeta"><span>App Development / SANDEEP KANATHIL AJI</span><span>10 / 10</span></div><h2>Thank You!</h2><div class="slidecontent">Questions &amp; Feedback Welcome</div></section></div><div class="controls"><button id="prev" aria-label="Previous slide">← Previous</button><span id="counter">1 / 10</span><button id="next" aria-label="Next slide">Next →</button><button id="print" aria-label="Print all slides">Print slides</button></div><p class="foot">Browser reading view of the supplied slide content. Original PowerPoint styling is preserved in the separately edited PPTX file.</p></main><script>const slides=[...document.querySelectorAll('.slide')],prev=document.getElementById('prev'),next=document.getElementById('next'),counter=document.getElementById('counter');let index=0;function show(n){index=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',index===i));prev.disabled=index===0;next.disabled=index===slides.length-1;counter.textContent=(index+1)+' / '+slides.length;window.scrollTo(0,0)}prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));document.getElementById('print').addEventListener('click',()=>window.print());document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(index+1);if(e.key==='ArrowLeft')show(index-1)});show(0)</script></body></html>
