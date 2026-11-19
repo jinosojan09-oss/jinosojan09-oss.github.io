@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JavaScript Presentation | Sandeep Kanathil Aji</title><meta name="theme-color" content="#172321">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box}body{margin:0;background:#102521;color:#ecf5ee;font-family:'DM Sans',sans-serif}a{color:inherit}header{max-width:1200px;margin:auto;padding:20px 24px;display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}header a{text-decoration:none;font-weight:700;color:#b8e4d6}header small{color:#d0dcd5}main{max-width:1100px;margin:20px auto;padding:0 20px}.slide{display:none;position:relative;min-height:560px;background:#f7f5ed;color:#122822;border-radius:24px;box-shadow:0 14px 55px #050d0b88;padding:clamp(26px,5vw,64px);overflow:auto}.slide.active{display:block}.slide:before{content:"";display:block;height:9px;background:#d75632;position:absolute;left:0;right:0;top:0}.slide-head{display:flex;justify-content:space-between;gap:15px;color:#aa4831;font-weight:700;font-size:.7rem;letter-spacing:.14em}.slide h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4.7vw,4rem);line-height:1.06;letter-spacing:-.05em;margin:40px 0 22px}.slide .copy{white-space:pre-wrap;overflow-wrap:anywhere;font:clamp(.76rem,1.35vw,1rem)/1.48 'DM Sans',sans-serif;max-width:940px;color:#3b4842}.controls{display:flex;align-items:center;justify-content:center;gap:16px;padding:28px 0 16px}.controls button{cursor:pointer;border:0;background:#b8e4d6;color:#16342a;padding:12px 20px;border-radius:30px;font-weight:700}.controls button:disabled{opacity:.3;cursor:default}.controls span{min-width:76px;text-align:center}.foot{text-align:center;color:#9eaea4;font-size:.8rem;padding:0 25px 34px}@media(min-width:1000px){.slide{aspect-ratio:16/10}}@media(max-width:600px){.slide{min-height:600px}.slide-head{font-size:.58rem}.slide h2{margin-top:34px}}@media print{body{background:white}header,.controls,.foot{display:none}.slide{display:block!important;page-break-after:always;border-radius:0;box-shadow:none;min-height:0;aspect-ratio:16/10}}</style></head>
+<body><header><a href="./">← Back to portfolio</a><small>Sandeep Kanathil Aji · 34-slide JavaScript presentation</small></header><main><section class="slide active" aria-label="Slide 1 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>01 / 34</span></div><h2>THE ODIN PROJECT / FULL STACK JAVASCRIPT</h2><div class="copy">JavaScript
+A detailed guide to the course, concepts, tools and
+projects
+
+From language fundamentals to building complete browser
+applications
+
+
+
+
+SANDEEP KANATHIL AJI
+
+Official source: The Odin Project — JavaScript Course</div></section>
+<section class="slide" aria-label="Slide 2 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>02 / 34</span></div><h2>01 / INTRODUCTION</h2><div class="copy">What is JavaScript?
+
+  JavaScript is a programming language that makes websites interactive. HTML
+  defines the content, CSS controls the appearance, and JavaScript adds behavior.
+
+
+
+    HTML — structure                      CSS — presentation                    JavaScript — behavior
+
+    Creates headings, paragraphs,         Controls colors, spacing,             Responds to clicks, validates input,
+    buttons, forms, images, and the       typography, responsive layouts, and   updates the page, requests data,
+    basic page structure.                 visual design.                        and runs application logic.
+
+
+
+
+   Example: when a user clicks “Add task”, JavaScript can read the input, create a task, and display it without
+   reloading the page.
+
+                                                                                                                       02</div></section>
+<section class="slide" aria-label="Slide 3 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>03 / 34</span></div><h2>01 / INTRODUCTION</h2><div class="copy">What does the course aim to teach?
+
+  • Move beyond beginner syntax and learn how JavaScript programs are organized.
+  • Understand objects, constructors, factory functions, classes, and modules.
+  • Use development tools such as npm, bundlers, and linters.
+  • Work with browser events, forms, APIs, and asynchronous operations.
+  • Write tests and learn core computer-science concepts such as recursion and data structures.
+  • Complete practical projects that demonstrate the skills in a real application.
+
+
+
+
+   The course emphasizes learning by doing: read, practice, build, debug, and improve.
+
+
+                                                                                                  03</div></section>
+<section class="slide" aria-label="Slide 4 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>04 / 34</span></div><h2>01 / INTRODUCTION</h2><div class="copy">How to study the course effectively
+
+  • Read each lesson carefully and try the examples in your own editor.
+  • Do not skip exercises just because the explanation seems easy; writing code reveals gaps in understanding.
+  • When code fails, read the error message and identify the smallest part that is not working.
+  • Search documentation and reliable references instead of relying only on memorized examples.
+  • Use Git to save progress and make it easier to undo or compare changes.
+  • Complete the projects independently before looking at other solutions, then compare approaches.
+
+
+
+
+                                                                                                                 04</div></section>
+<section class="slide" aria-label="Slide 5 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>05 / 34</span></div><h2>02 / ORGANIZING CODE</h2><div class="copy">Why code organization matters
+
+  A small script may be easy to understand in one file. As an application grows, keeping
+  everything together becomes confusing. Organizing code separates responsibilities and
+  makes it easier to test, reuse, and maintain.
+
+
+
+    Readability                         Reusability                            Maintenance
+
+    Clear names and small functions     A function or module can be used in    When a feature changes, a well-
+    help another developer understand   several places without repeating the   organized project is easier to update
+    the purpose of the code.            same logic.                            without breaking unrelated features.
+
+
+
+
+                                                                                                                       05</div></section>
+<section class="slide" aria-label="Slide 6 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>06 / 34</span></div><h2>02 / ORGANIZING CODE</h2><div class="copy">Objects and object constructors
+
+  • An object groups related data into properties and behavior into methods.
+  • For example, a book object might contain a title, author, page count, and a read/unread status.
+  • A constructor function is a pattern for creating several objects with a similar structure.
+  • Constructors help avoid writing the same object setup repeatedly.
+  • These ideas are useful when an application contains many related entities, such as books, users, products, or
+  game pieces.
+
+
+
+
+                                                                                  Simple example
+                                                                                  Book: title + author + pages + read status
+
+
+
+
+                                                                                                                               06</div></section>
+<section class="slide" aria-label="Slide 7 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>07 / 34</span></div><h2>02 / ORGANIZING CODE</h2><div class="copy">Factory functions and the module pattern
+
+
+    Factory functions                                              Module pattern
+
+    A factory function is a regular function that returns an       A module groups related variables and functions behind a
+    object. It can create objects from input values and hide       clear interface. It helps prevent unrelated code from
+    some internal details. This is useful when objects need a      becoming tangled and can keep implementation details
+    consistent shape.                                              private.
+
+
+
+
+   Example: a shopping-cart module could expose addItem(), removeItem(), and getTotal(), while
+   keeping its internal item list inside the module.
+
+
+   Key lesson: choose a structure that makes the code easier to understand—not a pattern just for the sake of using one.
+
+
+                                                                                                                              07</div></section>
+<section class="slide" aria-label="Slide 8 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>08 / 34</span></div><h2>02 / ORGANIZING CODE</h2><div class="copy">ES6 modules and classes
+
+  • ES modules let developers export values from one file and import them in another.
+  • Splitting code by responsibility can separate the user interface, data model, and application logic.
+  • Classes provide a syntax for defining objects that share properties and methods.
+  • Classes can make sense when many objects share a common structure, but simple functions and objects are
+  also useful.
+  • Good design avoids putting the entire application into one enormous function or one oversized file.
+
+
+
+
+     Practical benefit
+     A project becomes easier to navigate, debug, test, and extend.
+
+
+
+                                                                                                              08</div></section>
+<section class="slide" aria-label="Slide 9 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>09 / 34</span></div><h2>03 / PROJECTS</h2><div class="copy">Project: Library
+
+  The Library project applies object concepts to a small book collection. Instead of keeping
+  book details in unrelated variables, each book can be represented as an object.
+
+
+  • Represent each book with information such as title, author, number of pages, and read status.
+  • Create a way to add books and display the current collection.
+  • Practice creating objects consistently and updating their state.
+  • Think about how data and user-interface behavior should be separated.
+  • Test edge cases, such as empty fields or adding the same book more than once.
+
+
+
+
+                                                                                                    09</div></section>
+<section class="slide" aria-label="Slide 10 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>10 / 34</span></div><h2>03 / PROJECTS</h2><div class="copy">Project: Tic-Tac-Toe
+
+  • Build a browser game where two players take turns placing X and O on a 3×3 board.
+  • Represent the board state in JavaScript rather than relying only on what is visible on the page.
+  • Separate responsibilities: game rules, player turns, winner detection, and rendering the board.
+  • Use functions or modules to avoid putting all logic into one long block of code.
+  • Handle wins, draws, restarting the game, and invalid moves.
+  • This project practices planning, state management, DOM interaction, and organizing code.
+
+
+
+
+   The main challenge is not drawing nine squares—it is keeping the game rules and interface in sync.
+
+
+                                                                                                        10</div></section>
+<section class="slide" aria-label="Slide 11 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>11 / 34</span></div><h2>03 / PROJECTS</h2><div class="copy">Project: Restaurant Page
+
+  • Create a restaurant website where JavaScript modules generate or manage page content.
+  • Separate content for sections such as Home, Menu, and Contact.
+  • Use DOM manipulation to update what the visitor sees when they select a section.
+  • Practice bundling files and keeping HTML, CSS, and JavaScript responsibilities clear.
+  • Think about usability: navigation should be obvious and the page should remain readable on different screen
+  sizes.
+
+
+
+
+   This project demonstrates how JavaScript can build and control a real multi-section website.
+
+
+                                                                                                                  11</div></section>
+<section class="slide" aria-label="Slide 12 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>12 / 34</span></div><h2>03 / PROJECTS</h2><div class="copy">Project: Todo List
+
+  A todo list is a small productivity application, but it introduces problems that appear in
+  much larger software: storing data, updating records, and keeping the interface
+  consistent.
+
+
+     Create tasks                            Manage tasks                              Structure data
+
+     Allow a user to enter a task name       Support completing, editing,              Use objects and modules to keep
+     and optional details such as due        deleting, and filtering tasks.            task data, project lists, and interface
+     date or priority.                                                                 code organized.
+
+
+
+
+   A useful extension is saving data so the list remains available after refreshing the page.
+
+
+
+                                                                                                                                 12</div></section>
+<section class="slide" aria-label="Slide 13 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>13 / 34</span></div><h2>04 / DEVELOPER TOOLS</h2><div class="copy">npm: packages and scripts
+
+  • npm is commonly used to install and manage JavaScript packages.
+  • Packages let developers reuse tools and libraries instead of building every capability from scratch.
+  • The package.json file records project information, dependencies, and useful scripts.
+  • Scripts can automate common tasks, such as starting a development server or running tests.
+  • Dependency management helps a project use the tools it needs in a repeatable way.
+  • Only install packages you understand and trust, because dependencies are part of your project's software supply
+  chain.
+
+
+
+
+                                                                                                                  13</div></section>
+<section class="slide" aria-label="Slide 14 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>14 / 34</span></div><h2>04 / DEVELOPER TOOLS</h2><div class="copy">Webpack and bundling
+
+  • A bundler follows the files and dependencies used by an application and prepares them for the browser.
+  • Webpack can combine modules and assets into bundles that are easier to load and deploy.
+  • Bundling supports a modular development style while helping prepare a project for production.
+  • Configuration can define entry points, output files, and how different assets should be handled.
+  • Build tools can feel complicated at first; start with the basic workflow and add configuration only when needed.
+
+
+
+
+   Think of a bundler as a tool that gathers the pieces of a project and prepares them for delivery.
+
+
+                                                                                                                       14</div></section>
+<section class="slide" aria-label="Slide 15 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>15 / 34</span></div><h2>04 / DEVELOPER TOOLS</h2><div class="copy">JSON and linting
+
+
+    JSON — structured data                                       Linting — code feedback
+
+    JSON represents data using objects, arrays, strings,         A linter checks code for patterns that may indicate
+    numbers, booleans, and null. It is widely used to exchange   mistakes or inconsistent style. It helps teams follow
+    information between applications and APIs.                   conventions and catch problems early.
+
+
+
+
+   These tools do different jobs: JSON describes data; a linter helps developers improve code
+   quality.
+
+   Neither replaces understanding the code, testing behavior, or reviewing changes.
+
+
+
+
+                                                                                                                         15</div></section>
+<section class="slide" aria-label="Slide 16 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>16 / 34</span></div><h2>05 / PROGRAMMING CONCEPTS</h2><div class="copy">Object-oriented programming (OOP)
+
+  • OOP is a way of organizing programs around objects that combine data and behavior.
+  • Classes can describe the shared structure of related objects, while individual instances hold their own state.
+  • Methods are functions associated with an object or class.
+  • Encapsulation means keeping related data and operations together and controlling how that data is changed.
+  • Inheritance and composition are design tools; they should be used when they make the model clearer.
+  • An object-oriented design is not automatically better—simple functions may be enough for simple tasks.
+
+
+
+
+                                                                                                                     16</div></section>
+<section class="slide" aria-label="Slide 17 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>17 / 34</span></div><h2>05 / PROGRAMMING CONCEPTS</h2><div class="copy">Forms and validation
+
+  Forms collect information from users. Validation checks whether that information meets
+  the expected rules before the application accepts or processes it.
+
+
+
+    Required fields                          Format rules                             Helpful feedback
+
+    Check whether important fields           Check values such as email               Show clear messages near the
+    have been filled in before               addresses, password length, or           relevant field and help the user
+    continuing.                              matching confirmation fields.            correct mistakes.
+
+
+
+
+   Important: client-side validation improves usability, but servers must still validate untrusted input.
+
+
+
+                                                                                                                         17</div></section>
+<section class="slide" aria-label="Slide 18 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>18 / 34</span></div><h2>05 / PROGRAMMING CONCEPTS</h2><div class="copy">ECMAScript and browser compatibility
+
+  • ECMAScript is the standardized specification that JavaScript implementations follow.
+  • The language evolves over time, adding syntax and capabilities that developers can use.
+  • Not every browser or runtime supports every feature at the same time.
+  • Compatibility can be checked using reliable documentation and feature-compatibility references.
+  • Transpilers and build tools can convert some modern syntax into code supported by older environments.
+  • Developers should choose language features based on the project's target environments.
+
+
+
+
+                                                                                                            18</div></section>
+<section class="slide" aria-label="Slide 19 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>19 / 34</span></div><h2>06 / APIS &amp; ASYNC</h2><div class="copy">What is an API?
+
+  An API (Application Programming Interface) defines how one piece of software can request
+  information or services from another. A website can use an API to get data without
+  manually storing all of it itself.
+
+
+     Request                            Response                             Display
+
+     The application asks an API for    The service returns data, commonly   JavaScript processes the response
+     specific information, often over   in JSON format, or an error if the   and updates the interface for the
+     HTTP.                              request fails.                       user.
+
+
+
+
+                                                                                                                 19</div></section>
+<section class="slide" aria-label="Slide 20 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>20 / 34</span></div><h2>06 / APIS &amp; ASYNC</h2><div class="copy">Asynchronous JavaScript
+
+  • Some operations take time, such as downloading data or waiting for a response from a server.
+  • Asynchronous programming allows the application to continue handling other work while waiting.
+  • Promises represent the eventual success or failure of an asynchronous operation.
+  • async and await provide syntax that makes promise-based code easier to read.
+  • Applications should handle failures, such as network errors or unexpected responses.
+  • Loading indicators and useful error messages make the experience clearer for users.
+
+
+
+
+   A network request may succeed, fail, or take time—good code plans for all three outcomes.
+
+
+                                                                                                     20</div></section>
+<section class="slide" aria-label="Slide 21 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>21 / 34</span></div><h2>06 / APIS &amp; ASYNC</h2><div class="copy">Project: Weather App
+
+  • Let users search for a city or location.
+  • Request current weather data from a weather API.
+  • Read the returned data and choose the values needed for the interface.
+  • Display details such as temperature, conditions, and other available weather information.
+  • Handle invalid locations, missing data, loading time, and failed requests.
+  • Keep the API logic separate from display code so each part is easier to test and improve.
+
+
+
+
+   Skills demonstrated: API requests, asynchronous code, JSON, error handling, and user-interface updates.
+
+
+                                                                                                             21</div></section>
+<section class="slide" aria-label="Slide 22 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>22 / 34</span></div><h2>07 / TESTING</h2><div class="copy">Why test JavaScript?
+
+  Testing means checking that code behaves as expected. It is especially useful when a
+  project grows and a change in one area could accidentally break another feature.
+
+
+
+     Unit tests                           Edge cases                         Regression safety
+
+     Test a small function or component   Test unusual or boundary inputs,   Rerun tests after changes to check
+     in isolation, such as checking       such as empty values, zero, or a   that previously working behavior still
+     whether a score calculation is       missing item.                      works.
+     correct.
+
+
+
+
+                                                                                                                      22</div></section>
+<section class="slide" aria-label="Slide 23 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>23 / 34</span></div><h2>07 / TESTING</h2><div class="copy">A practical testing workflow
+
+  • Identify the behavior you want to verify.
+  • Write a test that describes the expected result.
+  • Run the test and inspect failures instead of ignoring them.
+  • Fix the code or the test expectation based on the intended behavior.
+  • Run the full test set after important changes.
+  • Keep tests focused, readable, and connected to actual requirements.
+
+
+
+
+   Testing is not only about finding bugs; it also documents how a piece of code is supposed to behave.
+
+
+                                                                                                          23</div></section>
+<section class="slide" aria-label="Slide 24 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>24 / 34</span></div><h2>08 / COMPUTER SCIENCE</h2><div class="copy">Recursion
+
+  • Recursion occurs when a function solves a problem by calling itself on a smaller version of the problem.
+  • A recursive solution needs a base case that stops the repeated calls.
+  • Each recursive step should move closer to the base case.
+  • Recursion can be natural for tree structures and problems that break into similar subproblems.
+  • It can also use more call-stack memory than an iterative approach, so it is important to understand the trade-
+  offs.
+
+
+
+
+                                                                               Think of it as
+                                                                               A smaller problem, then a smaller one, until a
+                                                                               simple stopping case is reached.
+
+
+
+                                                                                                                                24</div></section>
+<section class="slide" aria-label="Slide 25 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>25 / 34</span></div><h2>08 / COMPUTER SCIENCE</h2><div class="copy">Time and space complexity
+
+
+    Time complexity                                             Space complexity
+
+    Describes how the number of operations tends to grow as     Describes how memory use grows as the input grows. An
+    the input size grows. It helps compare approaches without   algorithm can be fast but require a lot of extra memory.
+    relying only on one computer's speed.
+
+
+
+
+   Big-O notation gives a broad description of growth, for example O(n) or O(n²). It is a useful
+   model, not an exact timing prediction.
+
+
+
+
+                                                                                                                           25</div></section>
+<section class="slide" aria-label="Slide 26 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>26 / 34</span></div><h2>08 / COMPUTER SCIENCE</h2><div class="copy">Data structures: choosing how to store information
+
+  • An array stores an ordered collection and is useful when items need positions or iteration.
+  • A linked list connects nodes, each holding data and a reference to another node.
+  • A hash map stores key-value pairs and is useful for looking up information by key.
+  • A binary search tree organizes values by comparisons and can support efficient search when appropriately
+  structured.
+  • The best structure depends on what the application needs to do frequently: search, insert, delete, or traverse.
+
+
+
+
+                                                                                                                      26</div></section>
+<section class="slide" aria-label="Slide 27 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>27 / 34</span></div><h2>08 / COMPUTER SCIENCE</h2><div class="copy">Data-structure projects
+
+
+    Linked Lists                            HashMap                               Binary Search Trees
+
+    Practice connecting nodes and           Practice mapping keys to values and   Practice organizing values so
+    moving through a sequence of            understanding how lookup works.       comparisons guide searching and
+    items.                                                                        traversal.
+
+
+
+
+   Knights Travails is a classic path-finding problem: find a sequence of legal knight moves
+   between two squares on a chessboard.
+
+
+   These exercises develop algorithmic thinking, not just JavaScript syntax.
+
+
+
+                                                                                                                    27</div></section>
+<section class="slide" aria-label="Slide 28 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>28 / 34</span></div><h2>09 / VERSION CONTROL</h2><div class="copy">Intermediate Git
+
+  • Git records changes to files over time so developers can understand and manage project history.
+  • A commit is a snapshot of selected changes with a message explaining the work.
+  • Branches allow work on a feature or experiment without immediately changing the main line of development.
+  • Remote repositories let developers back up work and collaborate with other people.
+  • Good commit messages describe the purpose of a change.
+  • Version control helps recover earlier work, review changes, and coordinate team development.
+
+
+
+
+                                                                                                                28</div></section>
+<section class="slide" aria-label="Slide 29 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>29 / 34</span></div><h2>10 / FINAL PROJECT</h2><div class="copy">Final project: Battleship
+
+  Battleship brings several course ideas together in a game where players place ships on
+  a board and try to locate the opponent's fleet.
+
+
+
+     Model the game                         Separate logic                          Test and improve
+
+     Represent boards, ships, attacks,      Keep game rules apart from display      Test hits, misses, ship sinking,
+     and game state with clear data         and user-interaction code.              invalid moves, and end-of-game
+     structures.                                                                    behavior.
+
+
+
+
+   A larger project teaches planning, integration, debugging, and persistence when the first design needs
+   improvement.
+
+
+                                                                                                                       29</div></section>
+<section class="slide" aria-label="Slide 30 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>30 / 34</span></div><h2>11 / PRACTICAL ADVICE</h2><div class="copy">Common challenges and how to handle them
+
+  • Too much information at once: take notes and focus on understanding one concept at a time.
+  • Code copied without understanding: rewrite the example in your own words and explain each line.
+  • Debugging feels confusing: reproduce the problem, read the error, and inspect values step by step.
+  • Projects feel too large: break them into small features and complete one at a time.
+  • Code becomes messy: use clear names, small functions, modules, and consistent formatting.
+  • Progress feels slow: measure progress by what you can build and explain, not by speed alone.
+
+
+
+
+                                                                                                         30</div></section>
+<section class="slide" aria-label="Slide 31 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>31 / 34</span></div><h2>12 / LEARNING OUTCOMES</h2><div class="copy">What should you be able to do?
+
+  • Explain and use objects, functions, classes, and modules in a practical project.
+  • Organize a codebase into readable files with clear responsibilities.
+  • Use npm and project tooling to manage dependencies and common tasks.
+  • Fetch API data and handle asynchronous results and errors.
+  • Write tests for important functions and edge cases.
+  • Explain basic recursion, complexity, and common data structures.
+  • Use Git to track work and complete a larger project independently.
+
+
+
+
+                                                                                       31</div></section>
+<section class="slide" aria-label="Slide 32 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>32 / 34</span></div><h2>12 / LEARNING OUTCOMES</h2><div class="copy">A recommended project workflow
+
+
+    1. Plan                                 2. Build small                        3. Review
+
+    Read the requirements, list features,   Implement one feature at a time and   Test, debug, refactor, and commit
+    and sketch the data you need.           check it before adding more.          your work with Git.
+
+
+
+
+   Repeat the cycle. A working small feature is a better foundation than a large unfinished
+   block of code.
+
+
+
+
+                                                                                                                      32</div></section>
+<section class="slide" aria-label="Slide 33 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>33 / 34</span></div><h2>13 / CONCLUSION</h2><div class="copy">From beginner JavaScript to building applications
+
+  The course develops more than knowledge of syntax. It encourages learners to
+  organize code, work with data, use professional tools, test behavior, and solve
+  unfamiliar problems.
+
+
+    Main message                                              Next step
+
+    Practice consistently, build each project yourself, and   Continue through the lessons in order and use each
+    treat debugging as part of learning.                      project to demonstrate your understanding.
+
+
+
+
+  Thank you
+
+                                                                                                                   33</div></section>
+<section class="slide" aria-label="Slide 34 of 34"><div class="slide-head"><span>THE ODIN PROJECT / JAVASCRIPT</span><span>34 / 34</span></div><h2>REFERENCE</h2><div class="copy">Course curriculum and official source
+
+  • Code organization: objects, constructors, factory functions, modules, and classes.
+  • Projects: Library, Tic-Tac-Toe, Restaurant Page, Todo List, Weather App, and Battleship.
+  • Tools and workflow: npm, Webpack, JSON, linting, and Git.
+  • Advanced topics: forms, ECMAScript, APIs, asynchronous JavaScript, testing, recursion, complexity, and data
+  structures.
+  • Computer-science projects include Linked Lists, HashMap, Binary Search Trees, and Knights Travails.
+
+
+
+
+  Official course page:
+  https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript
+
+  This presentation is an explanatory overview; lesson order and curriculum may change on the official site.
+                                                                                                                  34</div></section></main>
+<div class="controls"><button id="prev" aria-label="Previous slide">← Previous</button><span id="counter">1 / 34</span><button id="next" aria-label="Next slide">Next →</button></div><p class="foot">Use arrow keys to navigate. Source: user-supplied Odin Project presentation; name updated for Sandeep Kanathil Aji.</p>
+<script>const slides=[...document.querySelectorAll('.slide')],prev=document.getElementById('prev'),next=document.getElementById('next'),counter=document.getElementById('counter');let current=0;function show(n){current=Math.max(0,Math.min(slides.length-1,n));slides.forEach((el,i)=>el.classList.toggle('active',i===current));counter.textContent=(current+1)+' / '+slides.length;prev.disabled=current===0;next.disabled=current===slides.length-1;window.scrollTo({top:0,behavior:'smooth'})}prev.onclick=()=>show(current-1);next.onclick=()=>show(current+1);document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(current+1);if(e.key==='ArrowLeft')show(current-1)});show(0)</script></body></html>
